@@ -8,7 +8,7 @@
 环境搭建 : 
 ```
 =======================
-物理机需要安装 Virtual Box 虚拟机软件
+物理机需要安装 Virtual Box 虚拟机软件(因为需要将我们写好的操作系统运行起来 , 使用其他的虚拟机软件同样都可以达到要求)
 =======================
 [Virtual Box](https://www.virtualbox.org/)
 =======================
@@ -23,8 +23,21 @@ sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
 sudo apt-get install oracle-java8-installer
 sudo apt-get install oracle-java8-set-default
+4. 汇编语言开发环境(从这里获取最新的下载地址 : http://www.nasm.us/)
+wget http://www.nasm.us/pub/nasm/releasebuilds/2.12.02/nasm-2.12.02.tar.xz
+xz -d nasm-2.12.02.tar.xz
+tar -xf nasm-2.12.02.tar
+cd nasm-2.12.02
+./configure
+make
+sudo make install
 ======================
-Windows XP 虚拟机
+(
+突然发现汇编代码在Windows下编译并不能符合要求
+因此需要我们在类Unix环境下使用 nasm 进行编译
+因此舍弃下面的部分
+)
+~~Windows XP 虚拟机~~
 ======================
 4. 汇编开发环境
 在项目根目录下 /resource/masm 文件夹中 , 将其复制到 XP 虚拟机中即可
