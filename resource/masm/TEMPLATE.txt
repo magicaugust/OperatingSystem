@@ -1,0 +1,22 @@
+assume cs:code,ds:dat,ss:stack
+
+data segment
+
+data ends
+
+stack segment
+
+stack ends
+
+code segment
+
+    start:
+
+
+    finish:
+        mov ax,4cH
+        int 21H
+
+code ends
+
+end start
